@@ -55,11 +55,16 @@
 // }
 // console.log(indices); // this shows the index of a (and all the occurences if more than one)
 
-var letArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-var indices = [];
+
 
 function alphabetPosition(text) {
+
+  var letArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+  var indices = [];
+
+  text = text.toLowerCase();
   var textArray = text.split('');
   console.log(textArray);
 
@@ -72,39 +77,33 @@ function alphabetPosition(text) {
         // enter code here that displays the indices of the letters
         // CHANGE ARRAY LENGTHS SO IT ACCOUNTS FOR THE 0
         indices.push(j + 1)
-        var newString = indices.join(', ');
-      }
+        var newString = indices.join(' ');
+      } 
+      // else {
+      //   return "";
+      // }
     }
   };
 
   return newString;
 };
 
+console.log(alphabetPosition("%0!$-}-_"));
 
-console.log(alphabetPosition("dabc8"));
 
-    // if string is alpha numeric then execute this code. otherwise remove the character.
-
-    // loop through object
-    // for(var letter in myObj) {
-    //   if (text[i] == letter) {
-    //     arr.push[myObj[letter]];
-    //     console.log(arr);
-    //   } 
-    // } 
-
-//     for(var j = 0; j < letArray.length; j++) {
-
-//       if(text[i] == letArray[j]) {
-//         // var idx = letArray.indexOf(j)
-//         // console.log(idx);
-//         console.log(letArray.indexOf(j))
-//       }
-//     }
-  
+// other way of writing it
+// function alphabetPosition(text) {
+//   var result = "";
+//   for (var i = 0; i < text.length; i++){
+//     var code = text.toUpperCase().charCodeAt(i)
+//     if (code > 64 && code < 91) result += (code - 64) + " ";
 //   }
-//   return text;
-// };
+//   // console.log(typeof(result));
+//   return result.slice(0, result.length-1);
+// }
+
+// console.log(alphabetPosition('hello'));
+
 
 
 
