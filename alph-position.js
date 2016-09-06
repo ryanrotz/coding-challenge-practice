@@ -42,7 +42,7 @@
 //   z: 26
 // };
 
-var letArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
 
 // var arr = [];
 // var indices = [];
@@ -55,7 +55,9 @@ var letArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 // }
 // console.log(indices); // this shows the index of a (and all the occurences if more than one)
 
-  var indices = [];
+var letArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+var indices = [];
 
 function alphabetPosition(text) {
   var textArray = text.split('');
@@ -68,14 +70,19 @@ function alphabetPosition(text) {
       if(textArray[i] === letArray[j]) {
         console.log(textArray[i]);
         // enter code here that displays the indices of the letters
-        indices.push(j)
         // CHANGE ARRAY LENGTHS SO IT ACCOUNTS FOR THE 0
+        indices.push(j + 1)
+        var newString = indices.join(', ');
       }
-
     }
-
   };
-  return indices;
+
+  return newString;
+};
+
+
+console.log(alphabetPosition("dabc8"));
+
     // if string is alpha numeric then execute this code. otherwise remove the character.
 
     // loop through object
@@ -97,9 +104,9 @@ function alphabetPosition(text) {
   
 //   }
 //   return text;
-};
+// };
 
-console.log(alphabetPosition("abc8"));
+
 
 
 
