@@ -10,8 +10,32 @@ XO("zzoo") => false
 
 
 function XO(str) {
-    //code here
+  
+  xCount = 0;
+  oCount = 0;
+  
+  // make string an array
+  array = str.split('');
+   // loop through array
+   for(i = 0; i < array.length; i++) {
+   // if character is x, add to counter
+     if (array[i] === 'x' || array[i] === 'X') {
+       xCount++
+     } 
+     else if(array[i] === 'o' || array[i] === 'O') {
+       oCount++;
+     }
+   }
+   console.log(xCount);
+   console.log(oCount);
+   if(xCount === oCount) {
+    return true;
+   } else {
+    return false;
+   }
 }
+
+XO('xxoo');
 
 
 
