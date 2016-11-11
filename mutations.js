@@ -8,8 +8,8 @@
 
 
 function mutation(arr) {
-  
-  arr = arr[1].downcase;
+  arr[0] = arr[0].toLowerCase();
+  arr[1] = arr[1].toLowerCase();
   
   if (arr[0].indexOf(arr[1]) !== -1) {
     return true
